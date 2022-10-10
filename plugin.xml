@@ -43,7 +43,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </platform>
 
     <platform name="android">
-        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="17.2.2" />
+        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="25.13.0" />
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FirebaseConfig">
