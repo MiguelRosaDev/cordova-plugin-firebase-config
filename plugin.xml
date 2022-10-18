@@ -49,7 +49,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
         </platform>
                
-        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="30.3.1" />
+        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="30.0.0" />
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FirebaseConfig">
