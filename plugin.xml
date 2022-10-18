@@ -59,7 +59,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         <dependency id="cordova-support-android-plugin" version="~1.0.2" />
 
-        <framework src="platform('com.google.firebase:firebase-bom:$ANDROID_FIREBASE_BOM_VERSION')" />
+        <!-- <framework src="platform('com.google.firebase:firebase-bom:$ANDROID_FIREBASE_BOM_VERSION')" /> -->
         <framework src="com.google.firebase:firebase-config" />
 
         <source-file src="src/android/FirebaseConfigPlugin.java"
