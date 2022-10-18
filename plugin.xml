@@ -15,13 +15,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </js-module>
 
     <engines>
-        <engine name="cordova" version=">=7.1.0"/>
-        <engine name="cordova-android" version=">=10.0.0"/>
-        <engine name="cordova-ios" version=">=5.1.1"/>
+        <engine name="cordova" version=">=10.0.0"/>
+        <engine name="cordova-android" version=">=11.0.0"/>
+        <engine name="cordova-ios" version=">=6.0.0"/>
     </engines>
-           
-    <dependency id="cordova-outsystems-firebase-core" url="https://github.com/OutSystems/cordova-outsystems-firebase-core#1.0.0"/> 
 
+    <dependency id="cordova-plugin-firebase-analytics" url="https://github.com/OutSystems/cordova-plugin-firebase-analytics.git#5.0.0-OS2" />
+
+    <dependency id="cordova-outsystems-firebase-core" url="https://github.com/OutSystems/cordova-outsystems-firebase-core.git#1.0.0"/>
+           
     <platform name="ios">
         <preference name="IOS_FIREBASE_POD_VERSION" default="9.3.0" />
 
@@ -45,9 +47,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </platform>
 
     <platform name="android">
-               
-        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="30.0.0" />
-        <preference name="ANDROID_FIREBASE_CONFIG" default="20.0.0" />
+        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="30.3.1" />
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FirebaseConfig">
@@ -55,12 +55,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             </feature>
         </config-file>
 
-        <dependency id="cordova-support-android-plugin" version="~1.0.2" />        
-               
-        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+        <dependency id="cordova-support-android-plugin" version="~2.0.4" />
 
-        <!-- <framework src="platform('com.google.firebase:firebase-bom:$ANDROID_FIREBASE_BOM_VERSION')" /> -->
-        <!-- <framework src="com.google.firebase:firebase-config" /> -->
+        <framework src="platform('com.google.firebase:firebase-bom:$ANDROID_FIREBASE_BOM_VERSION')" />
+        <framework src="com.google.firebase:firebase-config" />
 
         <source-file src="src/android/FirebaseConfigPlugin.java"
             target-dir="src/by/chemerisuk/cordova/firebase/" />
